@@ -1,0 +1,9 @@
+﻿Laboratorio Semana 9 - evidencia de practica
+Fecha: 2026-09-04 09:45:46
+SHA256 inicial antes del cambio: FEC34EA6462C72C2FEB6A4ABFD8A7B0CEADA09E2A941C375331C42A108A94E5B
+SHA256 recuperado: A512694EE49AE0BC48417F780361BC159DDD91A86CFDE32014ADC37C9FDB72B4
+Recuperacion integra: True (el incremental incluye el cambio diario)
+SHA256 evidencia antes de alterar: A512694EE49AE0BC48417F780361BC159DDD91A86CFDE32014ADC37C9FDB72B4
+SHA256 evidencia despues de alterar: 0EEFC3CE6D0BC68544885E37C4EBA9B70393F1792FC1D6720832C044ED3F3266
+Cambio detectado por SHA256: True
+Archivos de respaldo creados: completo_archivo_critico.txt, incremental_archivo_critico.txt

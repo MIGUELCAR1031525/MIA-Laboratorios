@@ -1,0 +1,193 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2314 >>
+stream
+BT
+/F1 9 Tf
+45 755 Td
+12 TL
+( Laboratorio Semana 9 - Acceso, formatos, integridad y respaldos) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Estudiante: Miguel) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( Objetivo) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Aplicar conceptos de acceso, indexacion, formatos, integridad y respaldos en situaciones reales.) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 1. Busqueda) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Para una tienda con 300,000 productos recomendaria acceso directo mediante un indice tipo B-tree sobre el) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Una busqueda por igualdad \(codigo = P-105832\) no tendria que recorrer los 300,000 registros: el indice ) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 2. Indice invertido) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Un indice invertido relaciona cada palabra con la lista de documentos en los que aparece. Primero se norm) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Ejemplo:) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(text) Tj
+0 -12 Td
+(seguridad -> [doc01, doc04, doc09]) Tj
+0 -12 Td
+(archivo   -> [doc02, doc04]) Tj
+0 -12 Td
+(respaldo  -> [doc01, doc02, doc09]) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Para una consulta como seguridad AND respaldo, el sistema intersecta las listas y devuelve [doc01, doc09]) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 3. Formatos) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( Situacion  Formato  Justificacion ) Tj
+0 -12 Td
+(---------) Tj
+0 -12 Td
+( Enviar datos a una aplicacion web  JSON  Es compacto, legible y representa objetos y arreglos directamen) Tj
+0 -12 Td
+( Compartir una tabla de ventas  CSV  Representa filas y columnas con simplicidad y puede abrirse en hojas) Tj
+0 -12 Td
+( Almacenar informacion jerarquica  XML  Permite anidar elementos, usar atributos y validar una estructura) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(TSV tambien es apropiado para tablas cuando los datos contienen muchas comas. No lo elegiria como primera) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 4. Integridad) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Si la huella SHA-256 cambia despues de copiar el archivo, el archivo copiado no es identico al original. ) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Antes de utilizarlo se debe comparar la huella calculada del destino con la huella oficial del origen, ve) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 5. Respaldos) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Si los respaldos de lunes, martes y miercoles son incrementales, para recuperar el estado del miercoles s) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+7 0 obj
+<< /Length 1509 >>
+stream
+BT
+/F1 9 Tf
+45 755 Td
+12 TL
+(Si fueran diferenciales, se necesitaria el completo del domingo y solamente el diferencial del miercoles,) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( 6. Caso integrador) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Propongo una estrategia 3-2-1:) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(1. Tipo: backup completo semanal y backups incrementales diarios. Para datos especialmente criticos se pu) Tj
+0 -12 Td
+(2. Frecuencia: completo el domingo y incremental cada noche, despues de cerrar operaciones. Retener cuatr) Tj
+0 -12 Td
+(3. Ubicacion: una copia en el servidor, otra en un medio diferente y una copia externa o en la nube con v) Tj
+0 -12 Td
+(4. Recuperacion: aislar el equipo afectado, verificar el ultimo backup valido, restaurar el completo mas ) Tj
+0 -12 Td
+(5. Integridad: calcular SHA-256 antes del respaldo y despues de restaurar, comparar tamanos y metadatos i) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(Esta estrategia limita la perdida maxima esperada al intervalo entre respaldos, ofrece varias copias ante) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( Procedimiento realizado) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(El archivo practica.ps1 crea un archivo de datos, calcula su SHA-256, genera un respaldo completo y un re) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(La ejecucion se registro en evidencia/resultado_practica.txt; los archivos generados quedan en respaldo/ ) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+( Conclusion) Tj
+0 -12 Td
+() Tj
+0 -12 Td
+(El acceso indexado reduce el costo de busqueda, el indice invertido hace eficientes las consultas de text) Tj
+0 -12 Td
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000002683 00000 n 
+0000002809 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4370
+%%EOF
